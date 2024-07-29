@@ -1,36 +1,31 @@
 import { useNavigate } from "react-router-dom";
 
-
-
 const Navbar = () => {
-
     const navigate = useNavigate();
 
     return (
         <div className="navbar bg-base-100 mt-4">
             <div className="flex-1 mx-4 text-[10px] md:text-[16px] lg:text-xl">
-            <button onClick={() => navigate("/")}>
-                        bookThatDamnShow
-                    </button>
-                
+                <button onClick={() => navigate("/")}>
+                    bookThatDamnShow
+                </button>
             </div>
             <div className="flex-none">
-
                 <div className="flex-1 mx-4 text-xl">
                     <button onClick={() => navigate("/login")}>
                         Login
                     </button>
-
                 </div>
-
                 <div className="flex-1 mx-4 text-xl">
                     <button onClick={() => navigate("/signup")}>
                         Signup
                     </button>
-
                 </div>
-
-
+                <div className="flex-1 mx-4 text-xl">
+                    <button onClick={() => navigate("/cart")}>
+                        Cart
+                    </button>
+                </div>
                 <div className="dropdown dropdown-end mx-4">
                     <div
                         tabIndex={0}
@@ -58,7 +53,10 @@ const Navbar = () => {
                             <a>Settings</a>
                         </li>
                         <li>
-                            <a>Logout</a>
+                            <a onClick={() => {
+                                // Add logout logic here
+                                navigate("/");
+                            }}>Logout</a>
                         </li>
                     </ul>
                 </div>

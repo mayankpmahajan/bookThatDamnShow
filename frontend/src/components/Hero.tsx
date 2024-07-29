@@ -1,5 +1,14 @@
+import { useNavigate } from "react-router-dom"
 
 const Hero = () => {
+
+    const navigate = useNavigate();
+
+    const getStarted = () => {
+        navigate("/listingPage");
+    }
+
+
     return (
 
         <div
@@ -15,7 +24,7 @@ const Hero = () => {
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
                     </p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <button className="btn btn-primary" onClick = {getStarted}>Get Started</button>
                 </div>
             </div>
         </div>
